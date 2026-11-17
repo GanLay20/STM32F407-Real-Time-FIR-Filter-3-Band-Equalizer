@@ -43,12 +43,12 @@ arm_fir_instance_f32 S_bpf;
 arm_fir_instance_f32 S_lpf;
 
 
-uint32_t* pIn;
-uint32_t* pOut;
+uint32_t* volatile pIn;
+uint32_t* volatile pOut;
 int16_t* pIn1 ,* pIn2;
 int16_t* pOut1,* pOut2;
 
-uint32_t  FlagDataReady=0;
+uint32_t  volatile FlagDataReady=0;
 uint32_t offset =2000; 
 char flag=0;
 	
