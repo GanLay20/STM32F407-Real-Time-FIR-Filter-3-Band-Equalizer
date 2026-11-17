@@ -232,6 +232,7 @@ These files aren't part of the real-time system. I wrote them to understand what
 
 There are a few things I'd still like to improve:
 
+- The flag and pointers shared between the DMA callbacks and the main loop should be declared `volatile`.
 - The DAC value isn't limited to 0 to 4095, so large signals with high gains can wrap around.
 - There's a `_printf` call inside the processing loop that I used for debugging. It should come out of the real-time path.
 - If processing ever takes longer than one frame, the code doesn't detect it and just drops the frame.
