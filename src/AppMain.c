@@ -27,12 +27,12 @@ float32_t *input2=A2, *process2=B2, *output2=C2, *temp2; //triple buffer pointer
 
 //uint16_t DAC2_Buffer[FRAME_LENGTH];
 
-uint32_t* pIn;
-uint32_t* pOut;
+uint32_t* volatile pIn;
+uint32_t* volatile  pOut;
 int16_t* pIn1 ,* pIn2;
 int16_t* pOut1,* pOut2;
 
-uint32_t  FlagDataReady=0;
+uint32_t  volatile FlagDataReady=0;
 uint32_t offset =1900; 
 char flag=0;
 	
